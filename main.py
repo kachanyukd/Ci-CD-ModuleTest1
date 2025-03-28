@@ -24,3 +24,8 @@ def print_sorted_data(sorted_by_area, sorted_by_population):
     print("\nСортування за населенням:")
     for country in sorted_by_population:
         print(f"{country[0]}: Площа = {country[1]} кв. км, Населення = {country[2]} осіб")
+
+if __name__ == "__main__":
+    file_name = "population_data.txt" 
+    sorted_by_area, sorted_by_population = read_and_sort_population_data(file_name)
+    print_sorted_data(sorted_by_area, sorted_by_population)
