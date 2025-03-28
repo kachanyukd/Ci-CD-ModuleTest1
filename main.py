@@ -10,4 +10,10 @@ def read_and_sort_population_data(file_name):
                 population = int(parts[2].strip())
                 countries.append((name, area, population))
 
-    return countries
+    # Sorting by area
+    sorted_by_area = sorted(countries, key=lambda x: x[1])
+
+    # Sorting by population
+    sorted_by_population = sorted(countries, key=lambda x: x[2])
+
+    return sorted_by_area, sorted_by_population
